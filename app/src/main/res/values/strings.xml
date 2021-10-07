@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Instagram</string>
+    <string name="forgot"><font>Forgot your login details?</font><b>Get help logging in</b></string>
 </resources>

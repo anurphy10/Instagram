@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
+        btnLogin = findViewById(R.id.btnLogOut);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 loginUser(username, password);
             }
+
         });
     }
 
@@ -56,8 +57,13 @@ public class LoginActivity extends AppCompatActivity {
                 goMainActivity();
                 Toast.makeText(LoginActivity.this,"Success!", Toast.LENGTH_SHORT).show();
             }
+
+
         });
     }
+
+
+
 
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
