@@ -9,52 +9,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginTop="0dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/img_2" />
-
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivPostImage"
-        android:layout_alignBottom="@+id/ivPostImage"
-        android:layout_marginTop="-2dp"
-        android:layout_marginBottom="-46dp"
-        android:ems="10"
-        android:hint="Description"
-        android:minHeight="48dp" />
-
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:background="#00C6BABA"
-        android:drawableEnd="@drawable/ic_photo"
-        app:iconTint="#000000" />
-
-    <ImageView
-        android:id="@+id/ivPostImage"
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="95dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnSubmit"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:background="#00C6BABA"
-        android:drawableEnd="@drawable/ic_home"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>
